@@ -4,13 +4,41 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Explore DOM</title>
+	<style>
+		article{
+			border: 2px solid crimson;
+			border-radius: 20px;
+			margin: 5px;
+			padding: 5px;
+			
+		}
+	</style>
 </head>
 <body>
 	<main>
 		<section>
 			<h1>Exploring DOM</h1>
-			<p id="first">My First Paragraph</p>
-			<p>My Second Paragraph</p>
+			<!-- <p id="first">My First Paragraph</p>
+			<p>My Second Paragraph</p> -->
+
+			<!-- article*3>h3{article-$}+p.author{author-$}+p.description>lorem30 -->
+
+			<article>
+				<h3>article-1</h3>
+				<p class="author">author-1</p>
+				<p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quis atque explicabo blanditiis eius inventore quo in perspiciatis. Eos pariatur praesentium, vel a amet excepturi impedit voluptatibus quam asperiores illo?</p>
+			</article>
+			<article>
+				<h3>article-2</h3>
+				<p class="author">author-2</p>
+				<p class="description">Debitis cumque beatae eveniet alias maxime repudiandae! Neque fugiat recusandae ea tenetur aliquid quae illo sit, autem necessitatibus est, corporis ut exercitationem architecto! Eos sint porro odit repellendus unde dolores?</p>
+			</article>
+			<article>
+				<h3>article-3</h3>
+				<p class="author">author-3</p>
+				<p class="description">Voluptate nostrum, fugiat possimus maiores deleniti tenetur delectus sapiente officiis, exercitationem ratione dignissimos, quaerat velit officia harum modi quasi eos? Facere quaerat asperiores perferendis quae sit doloremque impedit voluptas sint!</p>
+			</article>
+
 		</section>
 	</main>
 	
@@ -19,11 +47,23 @@
 		// DOM > Document Object Model 
 		// console.log(document.body);
 
-		var first = document.getElementById('first');
+		/**var first = document.getElementById('first');
 		// first.style.color = 'green';
 		first.style.backgroundColor = 'crimson';
 		first.style.color = 'green';
 		first.style.fontSize = '48px';
+		*/
+
+		var authors = document.getElementsByClassName('author');
+		for(var i = 0; i < authors.length; i++){
+			var element = authors[i];
+
+			console.log(element.innerHTML);
+			element.innerHTML = 'leckohk- ' + i;
+
+			element.style.backgroundColor = 'lightblue';
+			element.style.margin = '10px';
+		}
 	</script>
 </body>
 </html>
