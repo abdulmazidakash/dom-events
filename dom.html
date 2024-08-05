@@ -12,6 +12,9 @@
 			padding: 5px;
 			
 		}
+		.special h3{
+
+		}
 	</style>
 </head>
 <body>
@@ -23,17 +26,19 @@
 
 			<!-- article*3>h3{article-$}+p.author{author-$}+p.description>lorem30 -->
 
+			 <!-- Most important article  -->
+
 			<article>
 				<h3>article-1</h3>
-				<p class="author">author-1</p>
+				<p title="I am the most important author" class="author" id="bestSeller">author-1</p>
 				<p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quis atque explicabo blanditiis eius inventore quo in perspiciatis. Eos pariatur praesentium, vel a amet excepturi impedit voluptatibus quam asperiores illo?</p>
 			</article>
-			<article>
+			<article  class="special">
 				<h3>article-2</h3>
 				<p class="author">author-2</p>
 				<p class="description">Debitis cumque beatae eveniet alias maxime repudiandae! Neque fugiat recusandae ea tenetur aliquid quae illo sit, autem necessitatibus est, corporis ut exercitationem architecto! Eos sint porro odit repellendus unde dolores?</p>
 			</article>
-			<article>
+			<article  class="special">
 				<h3>article-3</h3>
 				<p class="author">author-3</p>
 				<p class="description">Voluptate nostrum, fugiat possimus maiores deleniti tenetur delectus sapiente officiis, exercitationem ratione dignissimos, quaerat velit officia harum modi quasi eos? Facere quaerat asperiores perferendis quae sit doloremque impedit voluptas sint!</p>
@@ -54,12 +59,15 @@
 		first.style.fontSize = '48px';
 		*/
 
-		var authors = document.getElementsByClassName('author');
+		// var authors = document.getElementsByClassName('author');
+		document.body.style.backgroundColor = 'tomato';
+		var authors = document.querySelectorAll('.special h3');
 		for(var i = 0; i < authors.length; i++){
 			var element = authors[i];
 
-			console.log(element.innerHTML);
-			element.innerHTML = 'leckohk- ' + i;
+			// console.log(element.innerHTML);
+			element.innerHTML = 'leckhok- ' + i;
+			element.setAttribute('title', 'All author is same');
 
 			element.style.backgroundColor = 'lightblue';
 			element.style.margin = '10px';
