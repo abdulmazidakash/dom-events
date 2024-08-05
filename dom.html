@@ -9,15 +9,21 @@
 	<main>
 		<section>
 			<h1>Exploring DOM</h1>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, corrupti?</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			<p id="first">My First Paragraph</p>
+			<p>My Second Paragraph</p>
 		</section>
 	</main>
 	
 	<script>
-		var user = { name: 'jalali set', song: 'kakatua', numbers: 6}
+		// var user = { name: 'jalali set', song: 'kakatua', numbers: 6}
 		// DOM > Document Object Model 
-		console.log(document);
+		// console.log(document.body);
+
+		var first = document.getElementById('first');
+		// first.style.color = 'green';
+		first.style.backgroundColor = 'crimson';
+		first.style.color = 'green';
+		first.style.fontSize = '48px';
 	</script>
 </body>
 </html>
