@@ -28,7 +28,7 @@
 
 			 <!-- Most important article  -->
 
-			<article>
+			<article id="first-article">
 				<h3>article-1</h3>
 				<p title="I am the most important author" class="author" id="bestSeller">author-1</p>
 				<p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quis atque explicabo blanditiis eius inventore quo in perspiciatis. Eos pariatur praesentium, vel a amet excepturi impedit voluptatibus quam asperiores illo?</p>
@@ -42,6 +42,16 @@
 				<h3>article-3</h3>
 				<p class="author">author-3</p>
 				<p class="description">Voluptate nostrum, fugiat possimus maiores deleniti tenetur delectus sapiente officiis, exercitationem ratione dignissimos, quaerat velit officia harum modi quasi eos? Facere quaerat asperiores perferendis quae sit doloremque impedit voluptas sint!</p>
+			</article>
+			<article>
+				<h3>Grocery List</h3>
+				<ul id="gift-list">
+					<li>gift item - 1</li>
+					<li>gift item - 2</li>
+					<li>gift item - 3</li>
+					<li>gift item - 4</li>
+					<li>gift item - 5</li>
+				</ul>
 			</article>
 
 		</section>
@@ -60,7 +70,7 @@
 		*/
 
 		// var authors = document.getElementsByClassName('author');
-		document.body.style.backgroundColor = 'tomato';
+		/**document.body.style.backgroundColor = 'tomato';
 		var authors = document.querySelectorAll('.special h3');
 		for(var i = 0; i < authors.length; i++){
 			var element = authors[i];
@@ -72,6 +82,21 @@
 			element.style.backgroundColor = 'lightblue';
 			element.style.margin = '10px';
 		}
+			*/
+
+			const article = document.getElementById('first-article');
+			const newParagraph = document.createElement('p');
+			newParagraph.innerHTML = 'This is added by Javascript';
+			article.appendChild(newParagraph);
+
+			// add new more gift list 
+
+			const ul = document.getElementById('gift-list');
+			const li = document.createElement('li');
+			li.innerHTML = 'Brand gift';
+			ul.appendChild(li);
+
+
 	</script>
 </body>
 </html>
